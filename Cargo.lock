@@ -2503,34 +2503,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "monad-ws"
-version = "0.1.0"
-dependencies = [
- "alloy",
- "anyhow",
- "axum",
- "bigdecimal",
- "chrono",
- "dotenv",
- "futures",
- "futures-util",
- "hex",
- "once_cell",
- "serde",
- "serde_json",
- "serde_yaml",
- "sqlx",
- "tokio",
- "tokio-stream",
- "tokio-tungstenite 0.21.0",
- "tower-http",
- "tracing",
- "tracing-subscriber",
- "url",
- "uuid",
-]
-
-[[package]]
 name = "native-tls"
 version = "0.2.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3852,6 +3824,34 @@ name = "static_assertions"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
+
+[[package]]
+name = "streamer"
+version = "0.1.0"
+dependencies = [
+ "alloy",
+ "anyhow",
+ "axum",
+ "bigdecimal",
+ "chrono",
+ "dotenv",
+ "futures",
+ "futures-util",
+ "hex",
+ "once_cell",
+ "serde",
+ "serde_json",
+ "serde_yaml",
+ "sqlx",
+ "tokio",
+ "tokio-stream",
+ "tokio-tungstenite 0.21.0",
+ "tower-http",
+ "tracing",
+ "tracing-subscriber",
+ "url",
+ "uuid",
+]
 
 [[package]]
 name = "stringprep"

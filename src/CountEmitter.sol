@@ -1,20 +1,20 @@
-// SPDX-License-Identifier: SEE LICENSE IN LICENSE
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
 
 contract CountEmitter {
-    
-    event CountWitnessed(uint256 count);
+
+    event CountAcquired(uint256 count);
     event CountCommitted(uint256 count);
 
-    uint256 public nonce;
+    uint256 public count;
 
     constructor() {
-        nonce = 0;
+        count = 1;
     }
 
-    function emitCount() external {
-        emit CountWitnessed(nonce);
-        emit CountCommitted(nonce);
-        nonce++;
+    function increment() public {
+        emit CountAcquired(count);
+        emit CountCommitted(count);
+        ++count;
     }
 }

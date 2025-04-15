@@ -1,21 +1,18 @@
-// SPDX-License-Identifier: SEE LICENSE IN LICENSE
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
 
-import "forge-std/Script.sol";
-import "../src/CountEmitter.sol";
+import {Script} from "forge-std/Script.sol";
+import {CountEmitter} from "../src/CountEmitter.sol";
 
-contract DeployCountEmitter is Script {
-    function run() external {
-        // Start broadcasting transactions
-        vm.startBroadcast();
+contract CountEmitterScript is Script {
+    CountEmitter public countEmitter;
 
-        // Deploy the CountEmitter contract
-        CountEmitter countEmitter = new CountEmitter();
+    function run() public {
+        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+        vm.startBroadcast(deployerPrivateKey);
 
-        // Stop broadcasting transactions
+        countEmitter = new CountEmitter();
+
         vm.stopBroadcast();
-
-        // Log the deployed contract address
-        console.log("CountEmitter deployed at:", address(countEmitter));
     }
 }

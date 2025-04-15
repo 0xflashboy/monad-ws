@@ -1,0 +1,3 @@
+http_url: "http://mf-testnet-standby-fn-ovh-rbx-100:8080"
+ws_url: "ws://mf-testnet-standby-fn-ovh-rbx-100:8081"
+contract_address: "0x3f6F0CB96F7724F24B7c6eE5C9F59bF029f6bE94"
